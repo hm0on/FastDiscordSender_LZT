@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flet](https://img.shields.io/badge/Flet-0.80+-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 **Простое и удобное приложение для отложенной отправки сообщений в Discord с точностью до миллисекунд**
 
@@ -58,26 +57,9 @@ Discord Scheduled Message Sender — это десктопное приложе�
 
 ### Шаги установки
 
-1. **Клонируйте репозиторий** (или скачайте архив):
-   ```bash
-   git clone <repository-url>
-   cd atystrem
-   ```
+1. **Скачайте .exe файл из Releases**.
 
-2. **Установите зависимости**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-   Или вручную:
-   ```bash
-   pip install flet requests
-   ```
-
-3. **Запустите приложение**:
-   ```bash
-   python main.py
-   ```
+2. **Запустите .exe файл**.
 
 ---
 
@@ -127,23 +109,29 @@ Discord Scheduled Message Sender — это десктопное приложе�
 
 ---
 
-## 🔧 Сборка в exe
-(готовая сборка уже лежит в releases)
+## 🔧 Самостоятельная сборка
+(готовая сборка для Windows уже лежит в releases)
 
 ### Быстрый старт
 
-**На Windows:**
+**1. Клонируем репозиторий**:
 ```bash
-flet build windows --project "DiscordSender"
+git clone https://github.com/hm0on/FastDiscordSender_LZT
 ```
 
-**На macOS/Linux (для создания Windows exe):**
+**2. Устанавливаем Python** (если ещё не установлен)
+
+**3. Выполняем сборку проекта, находясь в его корневой директории**:
 ```bash
-pip install pyinstaller
-pyinstaller --onefile --windowed --name "DiscordSender" main.py
+flet build {system (windows / macos / linux)} --project "DiscordSender"
 ```
 
-Готовый exe файл будет в папке `dist/` или `build/windows/`.
+Пример сборки под macos:
+```bash
+flet build macos --project "DiscordSender"
+```
+
+Готовый exe файл будет в папке `dist/` или `build/macos/`.
 
 ---
 
